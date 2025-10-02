@@ -5,6 +5,11 @@
 	<h2 align="center"> WASDEditor </h2>
 	<h4 align="center"> A simple open-source dialogue system and editor <h4>
 </p>
+<p align="center">
+	<a href="https://gdscvit.itch.io/wasdeditor">
+		<img width="400" src="https://github.com/GDGVIT/nonlinear-info-editor/blob/dev/Assets/UI%20Art/WASDEditor_logo_darkmode.png" alt="WASDEditor"/>
+	</a>
+</p>
 
 ---
 [![Join Us](https://img.shields.io/badge/Join%20Us-Developer%20Student%20Clubs-red)](https://dsc.community.dev/vellore-institute-of-technology/)
@@ -15,9 +20,9 @@
 
 
 ## Features
-- [ ]  Character Creation
-- [ ]  Branching Dialogue Trees
-- [ ]  Designer Friendly
+- [X]  Character Creation
+- [X]  Branching Dialogue Trees
+- [X]  Designer Friendly
 
 <br>
 
