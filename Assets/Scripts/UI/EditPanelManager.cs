@@ -12,13 +12,12 @@ public class EditPanelManager : MonoBehaviour
     public TMP_InputField title;
     public TMP_Text id;
 
-    public TMP_Dropdown[] charSel;
-    public Toggle[] speakSel;
+    
 
     public TMP_InputField content;
 
     public ConnectionDisplayManager cdm;
-
+    public CharacterDisplayManager chardm;
     private void Awake()
     {
         inst = this;
@@ -34,25 +33,7 @@ public class EditPanelManager : MonoBehaviour
         id.text = currentlyEditing.dd.id + "";
         content.text = currentlyEditing.dd.line;
         cdm.init();
-        int j = 0;
-        foreach (var v in charSel) {
-            v.ClearOptions();
-            v.AddOptions(genCharTitles(DialogueTreeManager.tree.chars.ToArray()));
-            v.value = currentlyEditing.dd.charIDs[j];
-            j++;
-        }
-        if (currentlyEditing.dd.charCurrentlySpeaking == -1)
-        {
-            speakSel[0].isOn = false;
-            speakSel[1].isOn = false;
-            speakSel[2].isOn = false;
-        }
-        else
-        {
-            speakSel[currentlyEditing.dd.charCurrentlySpeaking].isOn = true;
-        }
-
-
+        chardm.init();
     }
 
     public void onClosePanel() {
@@ -65,29 +46,11 @@ public class EditPanelManager : MonoBehaviour
         DialogueTreeManager.tree.deleteDialogue(currentlyEditing.dd);
         currentlyEditing.UpdateDisplay();
     }
-    List<string> genCharTitles(Character[] op)
-    {
-        List<string> temp = new List<string>();
-        foreach(Character o in op)
-        {
-            temp.Add(o.Name);
-        }
-        return temp;
-    }
+   
     public void EditTitle(string value) {
         currentlyEditing.dd.title = value;
     }
-    public void EditCharacter(int id, int value) {
-        currentlyEditing.dd.charIDs[id] = value;
-    }
-    public void EditSpeaking(int id)
-    {
-        currentlyEditing.dd.charCurrentlySpeaking = id;
-    }
-    public void ClearSpeaking()
-    {
-        currentlyEditing.dd.charCurrentlySpeaking = -1;
-    }
+   
     public void EditLine(string value)
     {
         currentlyEditing.dd.line = value;

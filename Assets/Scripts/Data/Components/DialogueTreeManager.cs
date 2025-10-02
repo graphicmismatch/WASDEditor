@@ -17,7 +17,7 @@ public class DialogueTreeManager : MonoBehaviour
     public UnityEvent fullLineRefresh;
     public string folder;
     public string file;
-
+    
     public Transform dParent;
     public GameObject dialoguePrefab;
     private bool updated = false;

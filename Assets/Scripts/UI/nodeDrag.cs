@@ -14,13 +14,9 @@ public class nodeDrag : MonoBehaviour
     private Vector3 offset;
     public DialogueOBJ thisd;
     // Start is called before the first frame update
-    public void Awake()
-    {
-        clicktime = GameManager.dragtime;
-       
-    }
     void Start()
     {
+        clicktime = GameManager.inst.dragtime;
         sr = GameManager.sr;
         contentScaler.updateBounds(this.rt.position, rt.sizeDelta);
     }
@@ -32,7 +28,14 @@ public class nodeDrag : MonoBehaviour
         {
             clicked = but.buttonPressed;
             if (clicked) {
-                offset = rt.position - (Vector3)Mouse.current.position.value;
+                if (GameManager.inst.worldSpaceMatters)
+                {
+                    offset = rt.position - Camera.main.ScreenToWorldPoint((Vector3)Mouse.current.position.value);
+                }
+                else
+                {
+                    offset = rt.position - (Vector3)Mouse.current.position.value;
+                }
                 sr.enabled = false;
             }
         }
@@ -52,7 +55,14 @@ public class nodeDrag : MonoBehaviour
             
             if (clickdur >= clicktime)
             {
-                rt.position = (Vector3)Mouse.current.position.value +offset;
+                if (GameManager.inst.worldSpaceMatters)
+                {
+                    rt.position = Camera.main.ScreenToWorldPoint((Vector3)Mouse.current.position.value + offset);
+                }
+                else
+                {
+                    rt.position = (Vector3)Mouse.current.position.value + offset;
+                }
                 contentScaler.updateBounds(this.rt.anchoredPosition, rt.sizeDelta);
                 DialogueTreeManager.tree.refreshLines.Invoke();
             }

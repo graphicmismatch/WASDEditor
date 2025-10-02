@@ -63,7 +63,7 @@ public class DialogueData
     public VarVarOperation[] variableVariableOperations;
 
     //left to right
-    public int[] charIDs = new int[3];
+    public int[] charIDs;
 
     //0,1,2 for left, center, right
     public int charCurrentlySpeaking;
@@ -74,7 +74,7 @@ public class DialogueData
         options = new OptionData[0];
         variableConstantOperations = new VarConstOperation[0];
         variableVariableOperations = new VarVarOperation[0];
-        charIDs = new int[3];
+        charIDs = new int[1];
         charCurrentlySpeaking = -1;
     }
     public DialogueData(DialogueData dd) {

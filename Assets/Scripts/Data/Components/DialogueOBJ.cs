@@ -9,8 +9,7 @@ public class DialogueOBJ : MonoBehaviour
 
     public DialogueData dd;
 
-    public Transform entry;
-    public Transform exit;
+    public Transform nodeInteractionPoint;
     public List<Transform> ds;
     public List<GameObject> lines;
     public GameObject lineObj;
@@ -20,6 +19,7 @@ public class DialogueOBJ : MonoBehaviour
         lines = new List<GameObject>();
         DialogueTreeManager.tree.refreshLines.AddListener(UpdateLines);
         DialogueTreeManager.tree.fullLineRefresh.AddListener(UpdateDisplay);
+        
     }
     // Update is called once per frame
     void Update()
@@ -47,10 +47,11 @@ public class DialogueOBJ : MonoBehaviour
         Title.text = dd.id.ToString() + '-' + dd.title;
         ds.Clear();
         foreach (OptionData op in dd.options) {
-            if (op.id >= 0 && op.id < DialogueTreeManager.tree.dREF.Count && op.id != dd.id && DialogueTreeManager.tree.dREF[op.id].entry != null) {
-                ds.Add(DialogueTreeManager.tree.dREF[op.id].entry);
+            if (op.id >= 0 && op.id < DialogueTreeManager.tree.dREF.Count && op.id != dd.id && DialogueTreeManager.tree.dREF[op.id].nodeInteractionPoint != null) {
+                ds.Add(DialogueTreeManager.tree.dREF[op.id].nodeInteractionPoint);
             }
         }
+        TreeEndNotif.SetActive(lines.Count == 0);
         foreach (GameObject g in lines) {
             Destroy(g);
         }
@@ -61,11 +62,11 @@ public class DialogueOBJ : MonoBehaviour
                 ds.Remove(e);
                 continue;
             }
-            GameObject g = Instantiate(lineObj, exit);
-            List<Vector2> pts = new List<Vector2>();
-            pts.Add(Vector2.zero);
-            pts.Add(exit.InverseTransformPoint(e.position));
-            g.GetComponent<UILineRenderer>().points = pts;
+            GameObject g = Instantiate(lineObj, nodeInteractionPoint);
+            List<Vector3> pts = new List<Vector3>();
+            pts.Add(Vector3.zero + (Vector3.forward * 10));
+            pts.Add(nodeInteractionPoint.InverseTransformPoint(e.position) + (Vector3.forward * 10));
+            g.GetComponent<LineRenderer>().SetPositions(pts.ToArray());
             lines.Add(g);
         }
         UpdateLines();
@@ -74,15 +75,15 @@ public class DialogueOBJ : MonoBehaviour
 
     public void UpdateLines() {
         int counter = 0;
+        TreeEndNotif.SetActive(lines.Count == 0);
         foreach (GameObject g in lines) {
             if (ds[counter] == null) {
                 continue;
             }
-            List<Vector2> pts = new List<Vector2>();
-            pts.Add(Vector2.zero);
-            pts.Add(exit.InverseTransformPoint(ds[counter].position));
-            g.GetComponent<UILineRenderer>().points = pts;
-            g.GetComponent<UILineRenderer>().SetAllDirty();
+            List<Vector3> pts = new List<Vector3>();
+            pts.Add(Vector3.zero + (Vector3.forward * 10));
+            pts.Add(nodeInteractionPoint.InverseTransformPoint(ds[counter].position) + (Vector3.forward * 10));
+            g.GetComponent<LineRenderer>().SetPositions(pts.ToArray());
             counter++;
         }
     }
