@@ -419,7 +419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   idText: {fileID: 760770652}
-  name: {fileID: 0}
+  cname: {fileID: 0}
   isNullchar: 1
 --- !u!1 &69933745
 GameObject:
@@ -458,7 +458,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 30}
+  m_SizeDelta: {x: -55.88024, y: 30}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &69933747
 MonoBehaviour:
@@ -1276,8 +1276,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 394.8852, y: -617.2668}
-  m_SizeDelta: {x: 789.7704, y: 65.4118}
+  m_AnchoredPosition: {x: 336.57874, y: -617.2668}
+  m_SizeDelta: {x: 673.1575, y: 65.4118}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &97231622
 CanvasRenderer:
@@ -4908,7 +4908,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &553432552
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5577,7 +5577,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 96.042435, y: 0}
   m_SizeDelta: {x: 1280, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &666830570
@@ -8244,8 +8244,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 394.8852, y: -143.305}
-  m_SizeDelta: {x: 789.7704, y: 156.61}
+  m_AnchoredPosition: {x: 336.57874, y: -143.305}
+  m_SizeDelta: {x: 673.1575, y: 156.61}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1027720821
 MonoBehaviour:
@@ -8354,8 +8354,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 394.8852, y: -477.85712}
-  m_SizeDelta: {x: 789.7704, y: 203.4076}
+  m_AnchoredPosition: {x: 336.57874, y: -477.85712}
+  m_SizeDelta: {x: 673.1575, y: 203.4076}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1032079196
 MonoBehaviour:
@@ -8413,8 +8413,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 394.8852, y: -298.88165}
-  m_SizeDelta: {x: 789.7704, y: 144.5433}
+  m_AnchoredPosition: {x: 336.57874, y: -298.88165}
+  m_SizeDelta: {x: 673.1575, y: 144.5433}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1037127996
 GameObject:
@@ -9184,8 +9184,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1136927776}
   m_HandleRect: {fileID: 0}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 1
+  m_Value: 0.2173914
+  m_Size: 0.734498
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -10330,8 +10330,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 826054705}
   m_HandleRect: {fileID: 826054704}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 0.99999994
+  m_Value: 1
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -10447,7 +10447,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -0.000061035156, y: 30}
+  m_SizeDelta: {x: -55.88024, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1281000212
 MonoBehaviour:
@@ -12702,8 +12702,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 394.8852, y: -35}
-  m_SizeDelta: {x: 789.7704, y: 50}
+  m_AnchoredPosition: {x: 336.57874, y: -35}
+  m_SizeDelta: {x: 673.1575, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1558387297
 GameObject:
@@ -16489,11 +16489,11 @@ MonoBehaviour:
   m_Content: {fileID: 1794625590}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 3
   m_Viewport: {fileID: 732154278}
   m_HorizontalScrollbar: {fileID: 1560424282}
   m_VerticalScrollbar: {fileID: 1009872509}
@@ -16768,7 +16768,7 @@ MonoBehaviour:
   m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 4
+  m_KeyboardType: 2
   m_LineType: 0
   m_HideMobileInput: 0
   m_HideSoftKeyboard: 0

@@ -67,11 +67,6 @@ Please note that this project is released with a [Contributor Code of Conduct](C
 ❌ “Why won’t you support my use case? This is unacceptable!”
 ```
 
-## Misc
-
-- You are welcome to Propose a new feature or other project idea at our [ideas site](ideas.dscvit.com/)
-- You may Discuss a high-level topic or idea (for example, community, vision or policies) at our [Discord](https://discord.com/invite/cWyEXgV) Server
-
 ## Attribution
 
 - [Open Source Guide](https://opensource.guide/how-to-contribute/)

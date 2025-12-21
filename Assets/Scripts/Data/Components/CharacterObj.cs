@@ -6,7 +6,7 @@ public class CharacterObj : MonoBehaviour
     public int id;
 
     public TMP_Text idText;
-    public TMP_InputField name;
+    public TMP_InputField cname;
     public bool isNullchar;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,7 +34,7 @@ public class CharacterObj : MonoBehaviour
             nc.Name = s;
             DialogueTreeManager.tree.chars.Add(nc);
             UpdateID();
-            name.text = s;
+            cname.text = s;
         }
     }
     public void UpdateID()

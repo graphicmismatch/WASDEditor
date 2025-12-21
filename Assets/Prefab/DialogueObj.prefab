@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clicked: 0
-  clicktime: 0.2
+  clicktime: 0.4
   rt: {fileID: 4978149007062007729}
   but: {fileID: 1594324872751997126}
   thisd: {fileID: 814614931339991600}
